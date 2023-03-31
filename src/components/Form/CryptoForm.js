@@ -1,31 +1,64 @@
 import React, { useState } from "react";
 
 export default function CryptoForm() {
-  const [enteredName, setEnteredName] = useState("");
-  const [enteredVol, setEnteredVol] = useState("");
-  const [enteredDailyRate, setEnteredDailyRate] = useState("");
-  const [enteredPrice, setEnteredPrice] = useState("");
-  const [enteredLogo, setEnteredLogo] = useState("");
-  const [enteredWeeklyRate, setEnteredWeeklyRate] = useState("");
+  // const [enteredName, setEnteredName] = useState("");
+  // const [enteredVol, setEnteredVol] = useState("");
+  // const [enteredDailyRate, setEnteredDailyRate] = useState("");
+  // const [enteredPrice, setEnteredPrice] = useState("");
+  // const [enteredLogo, setEnteredLogo] = useState("");
+  // const [enteredWeeklyRate, setEnteredWeeklyRate] = useState("");
+
+  const [userInput, setUserInput] = useState({
+    enteredName: "",
+    enteredVol: "",
+    enteredDailyRate: "",
+    enteredPrice: "",
+    enteredLogo: "",
+    enteredWeeklyRate: "",
+  });
 
   const nameChangeHandler = (event) => {
-    setEnteredName(event.target.value);
+    // setEnteredName(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredName: event.target.value,
+    });
   };
   const volChangeHandler = (event) => {
-    setEnteredVol(event.target.value);
+    //setEnteredVol(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredVol: event.target.value,
+    });
   };
   const dailyRateChangeHandler = (event) => {
-    setEnteredDailyRate(event.target.value);
+    // setEnteredDailyRate(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredVol: event.target.value,
+    });
   };
   const priceChangeHandler = (event) => {
-    setEnteredPrice(event.target.value);
+    // setEnteredPrice(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredPrice: event.target.value,
+    });
   };
   const logoChangeHandler = (event) => {
-    setEnteredLogo(event.target.value);
+    // setEnteredLogo(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredLogo: event.target.value,
+    });
   };
 
   const weeklyRateChangeHandler = (event) => {
-    setEnteredWeeklyRate(event.target.value);
+    // setEnteredWeeklyRate(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredWeeklyRate: event.target.value,
+    });
   };
 
   return (
