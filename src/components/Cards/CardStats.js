@@ -15,7 +15,13 @@ export default function CardStats({
     <>
       <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg ">
         <div className="flex-auto p-4">
-          <div style={{'border-bottom':'1px solid #eee','border-top':'1px solid #eee'}} className="flex flex-wrap pt-2">
+          <div
+            style={{
+              borderBottom: "1px solid #eee",
+              borderTop: "1px solid #eee",
+            }}
+            className="flex flex-wrap pt-2"
+          >
             <div className="relative w-full pr-4 max-w-full flex-grow flex-1">
               <h5 className="text-blueGray-400 uppercase font-bold text-xs">
                 {statSubtitle}
@@ -25,8 +31,12 @@ export default function CardStats({
               </span>
             </div>
             <div className="relative w-auto pl-4 flex-initial">
-              <div className={"text-white p-3 text-center inline-flex items-center justify-center   rounded-full " }>
-                <img width="60" height="60" src={statIconName}/>
+              <div
+                className={
+                  "text-white p-3 text-center inline-flex items-center justify-center   rounded-full "
+                }
+              >
+                <img width="60" height="60" src={statIconName} />
                 {/* <i className={statIconName}></i> */}
               </div>
             </div>
@@ -65,9 +75,9 @@ CardStats.defaultProps = {
 
 CardStats.propTypes = {
   statSubtitle: PropTypes.string,
-  statTitle: PropTypes.string,
+  statTitle: PropTypes.number,
   statArrow: PropTypes.oneOf(["up", "down"]),
-  statPercent: PropTypes.string,
+  statPercent: PropTypes.number,
   // can be any of the text color utilities
   // from tailwindcss
   statPercentColor: PropTypes.string,
