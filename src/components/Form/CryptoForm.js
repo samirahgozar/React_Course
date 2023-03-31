@@ -39,6 +39,12 @@ export default function CryptoForm() {
       weeklyRate: enteredWeeklyRate,
     };
     console.log(cryptoData);
+    setEnteredName("");
+    setEnteredVol("");
+    setEnteredDailyRate("");
+    setEnteredPrice("");
+    setEnteredLogo("");
+    setEnteredWeeklyRate("");
   };
 
   return (
@@ -48,6 +54,7 @@ export default function CryptoForm() {
           <div class="xl:w-2/12 pr-4 mt-2">
             <input
               type="text"
+              value={enteredName}
               onChange={nameChangeHandler}
               placeholder="Name"
               class="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full"
@@ -56,6 +63,7 @@ export default function CryptoForm() {
           <div class="xl:w-2/12 pr-4 mt-2">
             <input
               type="text"
+              value={enteredVol}
               onChange={volChangeHandler}
               placeholder="Volume"
               class="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full"
@@ -64,6 +72,7 @@ export default function CryptoForm() {
           <div class="xl:w-2/12 pr-4 mt-2">
             <input
               type="text"
+              value={enteredDailyRate}
               onChange={dailyRateChangeHandler}
               placeholder="Daily Rate"
               class="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full"
@@ -72,6 +81,7 @@ export default function CryptoForm() {
           <div class="xl:w-2/12 pr-4 mt-2">
             <input
               type="text"
+              value={enteredPrice}
               onChange={priceChangeHandler}
               placeholder="Price"
               class="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full"
@@ -80,6 +90,7 @@ export default function CryptoForm() {
           <div class="xl:w-2/12 pr-4 mt-2">
             <input
               type="text"
+              value={enteredWeeklyRate}
               onChange={weeklyRateChangeHandler}
               placeholder="week Rate"
               class="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full"
@@ -89,6 +100,7 @@ export default function CryptoForm() {
         <div class="flex-wrap mx-4 mt-2">
           <input
             type="text"
+            value={enteredLogo}
             onChange={logoChangeHandler}
             placeholder="Logo Address"
             class="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full"
