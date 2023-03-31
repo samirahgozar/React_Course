@@ -19,9 +19,13 @@ export default function CryptoForm() {
 
   const nameChangeHandler = (event) => {
     // setEnteredName(event.target.value);
-    setUserInput({
-      ...userInput,
-      enteredName: event.target.value,
+    // setUserInput({
+    //   ...userInput,
+    //   enteredName: event.target.value,
+    // });
+
+    setUserInput((previousState) => {
+      return { ...previousState, enteredName: event.target.value };
     });
   };
   const volChangeHandler = (event) => {
