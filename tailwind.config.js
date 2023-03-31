@@ -97,6 +97,9 @@ module.exports = {
   ],
   plugins: [
     require("@tailwindcss/forms"),
+    require("tailwindcss"),
+require("autoprefixer"),
+require("@tailwindcss/ui"),
     plugin(function ({ addComponents, theme }) {
       const screens = theme("screens", {});
       addComponents([
