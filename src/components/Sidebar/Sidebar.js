@@ -105,11 +105,7 @@ export default function Sidebar() {
                   Dashboard
                 </Link>
               </li>
-
-             
             </ul>
-
-          
           </div>
         </div>
       </nav>
