@@ -31,12 +31,12 @@ export default function CryptoForm(props) {
   const submitFormHandler = (event) => {
     event.preventDefault();
     const cryptoData = {
-      name: enteredName,
+      currency: enteredName,
       vol: enteredVol,
-      dailyRate: enteredDailyRate,
+      dayRate: enteredDailyRate,
       price: enteredPrice,
-      logo: enteredLogo,
-      weeklyRate: enteredWeeklyRate,
+      img: enteredLogo,
+      weekRate: enteredWeeklyRate,
     };
     //console.log(cryptoData);
     //pass form data to NewCrypto(chile - to - parrent)
